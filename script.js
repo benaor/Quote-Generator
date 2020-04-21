@@ -1,4 +1,4 @@
-// Tableau de citations
+// Array citations
 let citations = [
     ["La vie est un mystère qu'il faut vivre, et non un problème à résoudre.", "Gandhi"],
     ["Le plus grand risque est de ne prendre aucun risque.", "Mark Zuckerberg"],
@@ -22,3 +22,8 @@ let citations = [
     ["Vous n’êtes jamais trop vieux pour vous fixer de nouveaux buts, ou rendre vos rêves réalité.", "C.S. Lewis"],
     ["Un pessimiste voit la difficulté dans chaque opportunité. Un optimiste voit une opportunité dans chaque difficulté.", "Winston Churchill"]
   ];
+
+//recover a ramdom quote
+RamdomIndex  = Math.floor( Math.random() * citations.length );
+RamdomQuote  = citations[RamdomIndex][0];
+RamdomAuthor = citations[RamdomIndex][1];

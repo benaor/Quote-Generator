@@ -27,3 +27,7 @@ let citations = [
 RamdomIndex  = Math.floor( Math.random() * citations.length );
 RamdomQuote  = citations[RamdomIndex][0];
 RamdomAuthor = citations[RamdomIndex][1];
+
+//Add Event on click on button
+let nouveau = document.querySelector('#nouveau');
+nouveau.addEventListener('click', newQuote());

@@ -21,13 +21,27 @@ let citations = [
     ["Les gagnants trouvent des moyens, les perdants des excuses…", "F. D. Roosevelt"],
     ["Vous n’êtes jamais trop vieux pour vous fixer de nouveaux buts, ou rendre vos rêves réalité.", "C.S. Lewis"],
     ["Un pessimiste voit la difficulté dans chaque opportunité. Un optimiste voit une opportunité dans chaque difficulté.", "Winston Churchill"]
-  ];
+];
 
-//recover a ramdom quote
-RamdomIndex  = Math.floor( Math.random() * citations.length );
-RamdomQuote  = citations[RamdomIndex][0];
-RamdomAuthor = citations[RamdomIndex][1];
+//recover a ramdom quote in function
+let RamdomIndex = Math.floor(Math.random() * citations.length);
+let RamdomQuote = citations[RamdomIndex][0];
+let RamdomAuthor = citations[RamdomIndex][1];
+
+//Text emplacement
+let zoneQuote = document.querySelector('#citation');
+let zoneAuthor = document.querySelector('#auteur');
+
+//function new Quote
+function newQuote() {
+    RamdomIndex = Math.floor(Math.random() * citations.length);
+    RamdomQuote = citations[RamdomIndex][0];
+    RamdomAuthor = citations[RamdomIndex][1];
+    zoneQuote.innerText = RamdomQuote;
+    zoneAuthor.innerText = RamdomAuthor;
+    console.log(RamdomIndex);
+}
 
 //Add Event on click on button
 let nouveau = document.querySelector('#nouveau');
-nouveau.addEventListener('click', newQuote());
+nouveau.addEventListener('click', newQuote);
